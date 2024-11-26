@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <form id="Login_form">
+        <label for="Lemail">Email:</label>
+        <input type="email" name="email" id="Lemail"><br>
+        <label for="Lpass">Password:</label>
+        <input type="password" name="pass" id="Lpass">
+        <br>
+        <button type="submit">Login</button>
+    </form>
+
+    <script>
+        const loginForm = document.getElementById("Login_form");
+        const email_input = document.getElementById("Lemail");
+        const pass_input = document.getElementById("Lpass");
+
+        loginForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            if ((email_input.value == localStorage.getItem("email")) && (pass_input.value == localStorage.getItem("password"))) {
+                window.location.href = "./index.html";
+            }
+            else {
+                alert("email or password is incorrect");
+            }
+        })
+    </script>
+</body>
+
+</html>
