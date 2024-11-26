@@ -4,13 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>register</title>
 </head>
 
 <body>
-    <script>
-        document.body.innerHTML = `<h1>Hello "${localStorage.getItem("name")}!"welcome to home page</h1>`
-    </script>
+    <form id="form">
+        <label for="name">name:</label>
+        <input type="text" name="name" id="name" placeholder="enter your name" minlength="3">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="password">
+        <br>
+        <label for="cpass">Conafirm Password:</label>
+        <input type="password" id="cpass" name="password">
+        <br>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female
+        <br>
+        <button type="submit">Register</button>
+    </form>
+    <div class="verifyContainer"><input id="verify_input" type="text">
+        <br>
+        <span id="otp_show"></span>
+        <br>
+        <button id="verify_button">verify</button>
+    </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>
