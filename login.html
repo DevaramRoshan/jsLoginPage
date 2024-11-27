@@ -25,7 +25,7 @@
         loginForm.addEventListener("submit", (e) => {
             e.preventDefault();
             if ((email_input.value == localStorage.getItem("email")) && (pass_input.value == localStorage.getItem("password"))) {
-                window.location.href = "./index.html";
+                window.location.href = "./home.html";
             }
             else {
                 alert("email or password is incorrect");
